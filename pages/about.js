@@ -8,7 +8,7 @@
 
 import BasePage from '../components/BasePage'
 import styled from 'styled-components'
-import { unit, mobile } from '../components/style-helpers'
+import { unit, mobile } from '../components/helpers'
 
 /*
 -----------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ import { unit, mobile } from '../components/style-helpers'
 export default () => (
   <BasePage>
     <TopSection>
-      <img src="/static/about_me.png" />
+      <img src="/static/misc/about_me.png" />
       <p>
         Hi, I'm <strong>Theodor</strong>! I currently live in Copenhagen working on creating amazing
         health software with <a href="https://lenus.io">Lenus eHealth</a>. I love hiking and have

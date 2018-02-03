@@ -10,6 +10,7 @@ import styled from 'styled-components'
 import { getBySlug } from '../db.js'
 import format from 'date-fns/format'
 import BasePage from './BasePage'
+import { unit } from './helpers'
 
 /*
 -----------------------------------------------------------------------------------
@@ -25,7 +26,7 @@ export default class Article extends React.Component {
   }
 
   componentDidMount = () => {
-    const slug = window.location.pathname.slice(1)
+    const slug = this.props.slug.slice(1)
     const article = getBySlug(slug)
     this.setState({ article })
   }
@@ -146,6 +147,44 @@ const RawLink = props => {
 export const Link = styled(RawLink)``
 
 export const SubHeading = styled.h2`
-  font-family: Times, Georgia, serif;
-  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top: 2.5rem;
+`
+
+const ImageLabel = styled.p`
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+`
+
+const RawImage = styled(props => <img {...props} src={props.src} />)`
+  width: 100%;
+`
+
+export const Image = styled(props => (
+  <div {...props}>
+    <RawImage src={props.src} />
+    {props.title && <ImageLabel>{props.title}</ImageLabel>}
+  </div>
+))`
+  width: 100%;
+  margin-bottom: 1.5rem;
+`
+
+export const ImageGrid = styled(props => (
+  <div {...props}>
+    {props.images.map((image, idx) => <RawImage key={idx} src={image.src} title={image.title} />)}
+  </div>
+))`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px -${1 * unit}px 1.5rem;
+
+  ${RawImage} {
+    flex: 1;
+    width: calc(50% - ${2 * unit}px);
+    margin: ${1 * unit}px;
+  }
 `

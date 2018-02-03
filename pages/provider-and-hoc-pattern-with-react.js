@@ -1,7 +1,7 @@
 import Article, { Paragraph, Code, SmallCode, List, Item, Link } from '../components/Article'
 
-export default () => (
-  <Article>
+export default ({ url: { asPath: slug } }) => (
+  <Article slug={slug}>
     <Paragraph>
       The <strong>provider pattern</strong> is useful for passing down data to nested components.
       The provider component is basically a parent component that wraps an arbitrary number of child

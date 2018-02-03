@@ -9,7 +9,7 @@
 import styled from 'styled-components'
 import Head from '../components/Head'
 import Link from 'next/link'
-import { unit, mobile } from '../components/style-helpers'
+import { unit, mobile } from '../components/helpers'
 import about from '../pages/about'
 
 /*

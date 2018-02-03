@@ -10,7 +10,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import Head from '../components/Head'
 import BasePage from '../components/BasePage'
-import { mobile, unit } from '../components/style-helpers'
+import { mobile, unit } from '../components/helpers'
 import format from 'date-fns/format'
 import { getAll } from '../db'
 

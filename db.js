@@ -8,7 +8,7 @@
 
 const articles = {
   'provider-and-hoc-pattern-with-react': {
-    title: 'Prover & HOC Pattern with React',
+    title: 'Provider & HOC Pattern with React',
     tags: ['Code', 'React'],
     date: new Date('2018-02-02'),
   },

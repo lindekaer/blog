@@ -20,6 +20,8 @@ export const unit = 8
 
 export const mobile = (...args) => css`
   @media (max-width: 600px) {
-    ${css(...args)}
+    ${css(...args)};
   }
 `
+
+export const getPath = (slug, file) => `/static${slug}/${file}`

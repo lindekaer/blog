@@ -7,7 +7,7 @@
 */
 
 import Head from 'next/head'
-import { mobile } from '../components/style-helpers'
+import { mobile } from '../components/helpers'
 
 /*
 -----------------------------------------------------------------------------------
